@@ -1,4 +1,5 @@
 import React from 'react';
+import Game from './components/Game'
 import './App.css';
 
 export default class App extends React.Component {
@@ -8,7 +9,7 @@ export default class App extends React.Component {
   render(){
     return (
       <div className="App">
-
+        <Game />
       </div>
     );
   }
