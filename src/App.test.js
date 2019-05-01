@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Game from './components/Game';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { expect } from 'chai';
@@ -15,4 +16,9 @@ describe('<App />', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
+
+  it('allows us to render the Game in the All', () => {
+    const wrapper = Enzyme.mount(<App />);
+    expect(wrapper.containsMatchingElement(<Game />)).to.equal(true);
+  })
 });
