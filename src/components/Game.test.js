@@ -15,4 +15,9 @@ describe('<Game />', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
+
+  it('allows us to render the Board component', () => {
+    const wrapper = Enzyme.mount(<Game bar="baz" />);
+    expect(wrapper.containsMatchingElement(<Board />)).to.equal(true);
+  });
 });
