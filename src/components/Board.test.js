@@ -15,4 +15,9 @@ describe('<Board />', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
+
+  it('allows us to render the Square component', () => {
+    const wrapper = Enzyme.mount(<Board bar="baz" />);
+    expect(wrapper.containsMatchingElement(<Square />)).toEqual(true);
+  });
 });
