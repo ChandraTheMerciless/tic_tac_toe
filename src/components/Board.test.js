@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Board from './Board';
+import Square from './Square';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { expect } from 'chai';
@@ -18,6 +19,6 @@ describe('<Board />', () => {
 
   it('allows us to render the Square component', () => {
     const wrapper = Enzyme.mount(<Board bar="baz" />);
-    expect(wrapper.containsMatchingElement(<Square />)).toEqual(true);
+    expect(wrapper.containsMatchingElement(<Square />)).to.equal(true);
   });
 });
