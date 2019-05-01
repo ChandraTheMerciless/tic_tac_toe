@@ -18,7 +18,7 @@ describe('<Square />', () => {
 
   it('allows us to change the state on a button click', () => {
     const wrapper = Enzyme.mount(<Square />);
-    wrapper.prop('onClick')();
+    wrapper.simulate('click');
     expect(wrapper.state('value')).to.equal("X");
   })
 });
