@@ -32,4 +32,8 @@ describe('<Board />', () => {
     wrapper.find('button').first().simulate('click');
     expect(wrapper.state('squares')[0]).to.equal('X');
   });
+
+  it('allows us to set X as the next player on load', () =>{
+    expect(wrapper.state('xGoesNext')).to.equal(true);
+  });
 });
