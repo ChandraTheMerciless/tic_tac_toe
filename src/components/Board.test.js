@@ -36,4 +36,9 @@ describe('<Board />', () => {
   it('allows us to set X as the next player on load', () =>{
     expect(wrapper.state('xGoesNext')).to.equal(true);
   });
+
+  it('allows us to set O as the next player after on square is clicked', () =>{
+    wrapper.find('button').first().simulate('click');
+    expect(wrapper.state('xGoesNext')).to.equal(false);
+  });
 });
