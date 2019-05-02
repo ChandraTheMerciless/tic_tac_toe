@@ -21,7 +21,8 @@ describe('<Board />', () => {
     expect(wrapper.containsMatchingElement(<Square />)).to.equal(true);
   });
 
-  it('contains 9 squares, one for each tic tac toe button', () => {
+  it('contains 9 squares, each set to null on load', () => {
     expect(wrapper.state('squares').length).to.equal(9);
+    expect(wrapper.state('squares')[0]).to.equal(null);
   });
 });
