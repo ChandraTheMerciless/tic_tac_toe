@@ -29,7 +29,13 @@ export default class Board extends React.Component {
   }
 
   render(){
+    debugger;
+    let status = "The next player is " + (this.state.xGoesNext ? 'X' : 'O');
+    // NOTE: I got a syntax error when I tried the returned code without a wrapping div around everything. - CMA
     return (
+      <div>
+      <div className="game-status">{status}</div>
+
       <div className="board-wrapper">
         <div className="row">
           {this.renderSquare(0)}
@@ -48,6 +54,7 @@ export default class Board extends React.Component {
           {this.renderSquare(7)}
           {this.renderSquare(8)}
         </div>
+      </div>
       </div>
     );
   }
