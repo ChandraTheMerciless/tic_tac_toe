@@ -20,4 +20,8 @@ describe('<Board />', () => {
   it('allows us to render the Square component', () => {
     expect(wrapper.containsMatchingElement(<Square />)).to.equal(true);
   });
+
+  it('contains 9 squares, one for each tic tac toe button', () => {
+    expect(wrapper.state('squares').length).to.equal(9);
+  });
 });
