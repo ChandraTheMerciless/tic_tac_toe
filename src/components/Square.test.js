@@ -15,10 +15,4 @@ describe('<Square />', () => {
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).to.equal('foo');
   });
-
-  it('allows us to change the props on a button click', () => {
-    const wrapper = Enzyme.mount(<Square />);
-    wrapper.simulate('click');
-    expect(wrapper.props('value')).to.equal("X");
-  })
 });

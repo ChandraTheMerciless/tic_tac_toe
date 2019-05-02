@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Board from './Board';
-import Square from './Square';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { expect } from 'chai';
@@ -18,7 +17,7 @@ describe('<Board />', () => {
   });
 
   it('allows us to render the Square component', () => {
-    expect(wrapper.containsMatchingElement(<Square />)).to.equal(true);
+    expect(wrapper.containsMatchingElement(<button />)).to.equal(true);
   });
 
   it('contains 9 squares, each set to null on load', () => {
@@ -28,7 +27,8 @@ describe('<Board />', () => {
 
   it('allows us to see the Square state in the Board component', () =>
   {
-    const squaresCopy = wrapper.state('squares')[0].simulate(click);
+    expect(wrapper.state('squares')[0]).to.equal(null);
+    wrapper.find('button').first().simulate('click');
     expect(wrapper.state('squares')[0]).to.equal('X');
   });
 });
