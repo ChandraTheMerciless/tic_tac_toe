@@ -6,10 +6,10 @@ export default class Square extends React.Component {
   render(){
     return (
       <button
-        className="Square"
+        className="square-wrapper"
         onClick={() => this.props.onClick()}
         id={this.props.id}>
-        {this.props.value}
+        <span>{this.props.value}</span>
       </button>
     );
   }

@@ -27,7 +27,7 @@ export default class Board extends React.Component {
 
   render(){
     return (
-      <div className="Board">
+      <div className="board-wrapper">
         <div className="row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}

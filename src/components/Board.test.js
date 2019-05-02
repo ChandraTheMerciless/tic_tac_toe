@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Square from './Square';
 import Board from './Board';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -17,7 +18,7 @@ describe('<Board />', () => {
   });
 
   it('allows us to render the Square component', () => {
-    expect(wrapper.containsMatchingElement(<button />)).to.equal(true);
+    expect(wrapper.containsMatchingElement(<Square />)).to.equal(true);
   });
 
   it('contains 9 squares, each set to null on load', () => {

@@ -4,6 +4,27 @@
   margin: 0;
 }
 
-.App {
+.app-container {
   text-align: center;
+}
+
+.game-wrapper{
+  width: 300px;
+  margin: auto;
+}
+
+.board-wrapper .row{
+  display: flex;
+  width: 100%;
+}
+
+.square-wrapper{
+  flex-grow: 1;
+  height: 100px;
+  /* NOTE: this border is currently for CSS testing only */
+  border: 1px solid red;
+}
+
+.square-wrapper span{
+  position: absolute;
 }
