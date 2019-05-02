@@ -46,4 +46,9 @@ describe('<Board />', () => {
     wrapper.find('button').first().simulate('click');
     expect(wrapper.state('xGoesNext')).to.equal(false);
   });
+
+  it('allows us to render the message to indicate that the next player is X', () => {
+    const wrapper = Enzyme.mount(<Board />);
+    expect(wrapper.find('.game-status').text()).to.equal("The next player is X");
+  });
 });
