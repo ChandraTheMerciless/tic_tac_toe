@@ -51,4 +51,10 @@ describe('<Board />', () => {
     const wrapper = Enzyme.mount(<Board />);
     expect(wrapper.find('.game-status').text()).to.equal("The next player is X");
   });
+
+  it('allows us to render the message to indicate that the next player is O', () => {
+    const wrapper = Enzyme.mount(<Board />);
+    wrapper.find('button').first().simulate('click');
+    expect(wrapper.find('.game-status').text()).to.equal("The next player is O");
+  });
 });
