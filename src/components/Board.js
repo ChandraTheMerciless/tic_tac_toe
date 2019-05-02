@@ -14,8 +14,11 @@ export default class Board extends React.Component {
   // Creates a copy of this.state.squares array, changes copy's state, and then sets original state's squares equal to copy of squares
   handleClick(i){
     const squares = this.state.squares.slice();
-    squares[i] = 'X';
-    this.setState({squares: squares});
+    squares[i] = this.state.xGoesNext ? 'X' : 'O';
+    this.setState({
+      squares: squares,
+      xGoesNext: !this.state.xGoesNext
+    });
   }
 
   renderSquare(i){
