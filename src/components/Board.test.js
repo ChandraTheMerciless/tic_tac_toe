@@ -25,4 +25,10 @@ describe('<Board />', () => {
     expect(wrapper.state('squares').length).to.equal(9);
     expect(wrapper.state('squares')[0]).to.equal(null);
   });
+
+  it('allows us to see the Square state in the Board component', () =>
+  {
+    const squaresCopy = wrapper.state('squares')[0].simulate(click);
+    expect(wrapper.state('squares')[0]).to.equal('X');
+  });
 });
